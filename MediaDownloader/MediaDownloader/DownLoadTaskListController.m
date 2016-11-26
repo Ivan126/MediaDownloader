@@ -28,10 +28,10 @@
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.8]];
-    [self.tableView registerClass:[DownLoadTaskCell class] forCellReuseIdentifier:@"DownLoadTaskCell"];
+    [self.tableView registerClass:[DownLoadTaskCell class] forCellReuseIdentifier:NSStringFromClass([DownLoadTaskCell class])];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleMWPhotoLoadingDidEndNotification:)
+                                             selector:@selector(handleMediaLoadingDidEndNotification:)
                                                  name:@"MEDIA_LOADING_DID_END_NOTIFICATION"
                                                object:nil];
 }
@@ -74,7 +74,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DownLoadTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DownLoadTaskCell"
+    DownLoadTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DownLoadTaskCell class])
                                                        forIndexPath:indexPath];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -95,7 +95,7 @@
     return 70;
 }
 
-- (void)handleMWPhotoLoadingDidEndNotification:(NSNotification *)notification {
+- (void)handleMediaLoadingDidEndNotification:(NSNotification *)notification {
     NSString *url = [notification object];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.data removeObject:url];
