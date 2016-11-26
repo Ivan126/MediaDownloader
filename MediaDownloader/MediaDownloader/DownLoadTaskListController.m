@@ -8,6 +8,8 @@
 
 #import "DownLoadTaskListController.h"
 #import "DownLoadTaskCell.h"
+#import "UIViewController+AddButton.h"
+#import "MediaDownloader.h"
 
 @interface DownLoadTaskListController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -34,6 +36,23 @@
                                              selector:@selector(handleMediaLoadingDidEndNotification:)
                                                  name:@"MEDIA_LOADING_DID_END_NOTIFICATION"
                                                object:nil];
+    
+    
+    [self addBt:@"暂停下载" frame:CGRectMake(140, 40, 100, 40)
+   autoresizing:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin
+          block:^(id BlockButton) {
+              MediaDownloader *downloader = [MediaDownloader sharedDownloader];
+              [downloader setSuspended:YES];
+          }];
+    
+    
+
+    [self addBt:@"恢复下载" frame:CGRectMake(260, 40, 100, 40)
+   autoresizing:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin
+          block:^(id BlockButton) {
+              MediaDownloader *downloader = [MediaDownloader sharedDownloader];
+              [downloader setSuspended:NO];
+          }];
 }
 
 - (void)viewWillLayoutSubviews {

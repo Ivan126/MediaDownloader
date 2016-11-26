@@ -23,7 +23,7 @@
     
     __weak __typeof(self)weakSelf = self;
     
-    [self addBt:@"开始下载" frame:CGRectMake(20, 40, 120, 40)
+    [self addBt:@"开始下载" frame:CGRectMake(20, 40, 100, 40)
    autoresizing:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin
           block:^(id BlockButton) {
               [weakSelf startDownLoad];
@@ -74,7 +74,7 @@
     
     
     MediaDownloader *downloader = [MediaDownloader sharedDownloader];
-    
+    [downloader setSuspended:NO];
     [downloader cancelAllDownloads];
     
     [downloader setMaxConcurrentDownloads:4];
