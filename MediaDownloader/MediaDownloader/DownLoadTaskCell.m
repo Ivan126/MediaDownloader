@@ -2,7 +2,7 @@
 //  DownLoadTaskCell.m
 //  MediaDownloader
 //
-//  Created by weiyanwu on 2016/11/26.
+//  Created by Ivan on 2016/11/26.
 //  Copyright © 2016年 Ivan. All rights reserved.
 //
 
@@ -65,11 +65,7 @@
                                                  selector:@selector(setProgressFromNotification:)
                                                      name:@"MEDIA_PROGRESS_NOTIFICATION"
                                                    object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(handleMWPhotoLoadingDidEndNotification:)
-                                                     name:@"MEDIA_LOADING_DID_END_NOTIFICATION"
-                                                   object:nil];
-        
+
     }
     
     return self;
@@ -95,26 +91,17 @@
 {
     NSLog(@"%f",progress);
     self.progressView.progress = MAX(MIN(1, progress), 0);
+    self.progressTextLabel.text = [NSString stringWithFormat:@"%4.2f%%",self.progressView.progress*100];
 }
 
 - (void)setProgressFromNotification:(NSNotification *)notification {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSDictionary *dict = [notification object];
-        NSString *url = [dict objectForKey:@"url"];
-        if ([url isEqualToString:_url]) {
-            float progress = [[dict valueForKey:@"progress"] floatValue];
-            self.progressView.progress = MAX(MIN(1, progress), 0);
-        }
-    });
-}
-
-- (void)handleMWPhotoLoadingDidEndNotification:(NSNotification *)notification {
-    NSString *url = [notification object];
-   if ([url isEqualToString:_url]) {
-    
+    NSDictionary *dict = [notification object];
+    NSString *url = [dict objectForKey:@"url"];
+    if ([url isEqualToString:_url]) {
+        float progress = [[dict valueForKey:@"progress"] floatValue];
+        [self setProgress:progress];
     }
 }
-
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

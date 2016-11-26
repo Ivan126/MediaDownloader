@@ -2,7 +2,7 @@
 //  DownLoadTaskListController.m
 //  MediaDownloader
 //
-//  Created by weiyanwu on 2016/11/26.
+//  Created by Ivan on 2016/11/26.
 //  Copyright © 2016年 Ivan. All rights reserved.
 //
 
@@ -30,6 +30,10 @@
     [self.tableView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.8]];
     [self.tableView registerClass:[DownLoadTaskCell class] forCellReuseIdentifier:@"DownLoadTaskCell"];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleMWPhotoLoadingDidEndNotification:)
+                                                 name:@"MEDIA_LOADING_DID_END_NOTIFICATION"
+                                               object:nil];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -91,11 +95,31 @@
     return 70;
 }
 
+- (void)handleMWPhotoLoadingDidEndNotification:(NSNotification *)notification {
+    NSString *url = [notification object];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.data removeObject:url];
+        [self.tableView reloadData];
+        
+        if([self.data count] == 0)
+        {
+            [self dismissViewControllerAnimated:NO completion:^{
+                
+            }];
+        }
+    });
+
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 
 @end

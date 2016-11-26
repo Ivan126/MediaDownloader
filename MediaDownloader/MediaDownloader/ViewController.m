@@ -77,7 +77,7 @@
     
     [downloader cancelAllDownloads];
     
-    [downloader setMaxConcurrentDownloads:2];
+    [downloader setMaxConcurrentDownloads:4];
     
     
     
