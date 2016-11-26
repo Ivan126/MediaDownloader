@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "MediaDownloader.h"
+#import "UIViewController+AddButton.h"
+#import "DownLoadTaskListController.h"
 
 @interface ViewController ()
 
@@ -19,9 +21,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    MediaDownloader *downloader = [MediaDownloader sharedDownloader];
-    [downloader setMaxConcurrentDownloads:4];
+    __weak __typeof(self)weakSelf = self;
     
+    [self addBt:@"开始下载" frame:CGRectMake(20, 40, 120, 40)
+   autoresizing:UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin
+          block:^(id BlockButton) {
+              [weakSelf startDownLoad];
+          }];
+
+}
+
+
+-(void)startDownLoad
+{
+
     NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"http://mvvideo1.meitudata.com/55b447cb9f62a3176.mp4",
                            @"http://mvvideo1.meitudata.com/55b5c7bc9ca259064.mp4",
                            @"http://mvvideo2.meitudata.com/55b5c867884201037.mp4",
@@ -43,18 +56,58 @@
                            @"http://mvvideo1.meitudata.com/55de53e3c63ec917.mp4",
                            @"http://mvvideo2.meitudata.com/55dfb9c1e567d2755.mp4", nil];
     
-    for(int i = 0;i<[arr count];i++)
+    
+    NSMutableDictionary *progressDict = [NSMutableDictionary dictionary];
+    
+    DownLoadTaskListController *vc = [[DownLoadTaskListController alloc] init];
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    
+    
+    if(arr.count > 0)
     {
-        __block int index = i;
-        [downloader downloadWithURL:[NSURL URLWithString:arr[i]] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        vc.data = arr;
+        vc.progressDict = progressDict;
+        [self presentViewController:vc animated:YES completion:^{
             
-            NSLog(@"%i----------%f",index,receivedSize*1.0/expectedSize);
-        } completed:^(NSData *data, NSError *error, BOOL finished) {
-            NSLog(@"%@",[NSThread currentThread]);
         }];
     }
-}
+    
+    
+    MediaDownloader *downloader = [MediaDownloader sharedDownloader];
+    
+    [downloader cancelAllDownloads];
+    
+    [downloader setMaxConcurrentDownloads:2];
+    
+    
+    
+    for(int i = 0;i<[arr count];i++)
+    {
+        NSString *url = [arr objectAtIndex:i];
+        [downloader downloadWithURL:[NSURL URLWithString:url] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+            
+            if (expectedSize > 0)
+            {
+                float progress = receivedSize / (float)expectedSize;
+                NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      [NSNumber numberWithFloat:progress], @"progress",
+                                      url, @"url", nil];
+                
+                progressDict[url] = [NSNumber numberWithFloat:progress];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"MEDIA_PROGRESS_NOTIFICATION" object:dict];
+                
+                
+            }
+        } completed:^(NSData *data, NSError *error, BOOL finished) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"MEDIA_LOADING_DID_END_NOTIFICATION" object:url];
+            
+        }];
+    }
+    
+    
 
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

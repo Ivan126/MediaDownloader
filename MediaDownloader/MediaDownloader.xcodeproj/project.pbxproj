@@ -16,6 +16,10 @@
 		85E54E2A1DE94FB10008EFFD /* MediaDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E271DE94FB10008EFFD /* MediaDownloader.m */; };
 		85E54E2B1DE94FB10008EFFD /* MediaDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E291DE94FB10008EFFD /* MediaDownloaderOperation.m */; };
 		85E54E361DE95A590008EFFD /* MediaCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E351DE95A590008EFFD /* MediaCompat.m */; };
+		85E54E3C1DE9B94F0008EFFD /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E3B1DE9B94F0008EFFD /* BlockButton.m */; };
+		85E54E3F1DE9B9810008EFFD /* UIViewController+AddButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E3E1DE9B9810008EFFD /* UIViewController+AddButton.m */; };
+		85E54E421DE9BA9B0008EFFD /* DownLoadTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E411DE9BA9B0008EFFD /* DownLoadTaskCell.m */; };
+		85E54E451DE9BAB30008EFFD /* DownLoadTaskListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E441DE9BAB30008EFFD /* DownLoadTaskListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,14 @@
 		85E54E2C1DE94FD80008EFFD /* MediaOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaOperation.h; sourceTree = "<group>"; };
 		85E54E2F1DE9513B0008EFFD /* MediaCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCompat.h; sourceTree = "<group>"; };
 		85E54E351DE95A590008EFFD /* MediaCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCompat.m; sourceTree = "<group>"; };
+		85E54E3A1DE9B94F0008EFFD /* BlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
+		85E54E3B1DE9B94F0008EFFD /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
+		85E54E3D1DE9B9810008EFFD /* UIViewController+AddButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AddButton.h"; sourceTree = "<group>"; };
+		85E54E3E1DE9B9810008EFFD /* UIViewController+AddButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AddButton.m"; sourceTree = "<group>"; };
+		85E54E401DE9BA9B0008EFFD /* DownLoadTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadTaskCell.h; sourceTree = "<group>"; };
+		85E54E411DE9BA9B0008EFFD /* DownLoadTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadTaskCell.m; sourceTree = "<group>"; };
+		85E54E431DE9BAB30008EFFD /* DownLoadTaskListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadTaskListController.h; sourceTree = "<group>"; };
+		85E54E441DE9BAB30008EFFD /* DownLoadTaskListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadTaskListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +87,19 @@
 				85E54E2F1DE9513B0008EFFD /* MediaCompat.h */,
 				85E54E351DE95A590008EFFD /* MediaCompat.m */,
 				85E54E2C1DE94FD80008EFFD /* MediaOperation.h */,
+				85E54E431DE9BAB30008EFFD /* DownLoadTaskListController.h */,
+				85E54E441DE9BAB30008EFFD /* DownLoadTaskListController.m */,
+				85E54E401DE9BA9B0008EFFD /* DownLoadTaskCell.h */,
+				85E54E411DE9BA9B0008EFFD /* DownLoadTaskCell.m */,
 				85E54E121DE94FA00008EFFD /* AppDelegate.h */,
 				85E54E131DE94FA00008EFFD /* AppDelegate.m */,
 				85E54E151DE94FA00008EFFD /* ViewController.h */,
 				85E54E161DE94FA00008EFFD /* ViewController.m */,
 				85E54E181DE94FA00008EFFD /* Main.storyboard */,
+				85E54E3A1DE9B94F0008EFFD /* BlockButton.h */,
+				85E54E3B1DE9B94F0008EFFD /* BlockButton.m */,
+				85E54E3D1DE9B9810008EFFD /* UIViewController+AddButton.h */,
+				85E54E3E1DE9B9810008EFFD /* UIViewController+AddButton.m */,
 				85E54E1B1DE94FA00008EFFD /* Assets.xcassets */,
 				85E54E1D1DE94FA00008EFFD /* LaunchScreen.storyboard */,
 				85E54E201DE94FA00008EFFD /* Info.plist */,
@@ -168,9 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E54E451DE9BAB30008EFFD /* DownLoadTaskListController.m in Sources */,
+				85E54E3C1DE9B94F0008EFFD /* BlockButton.m in Sources */,
 				85E54E2B1DE94FB10008EFFD /* MediaDownloaderOperation.m in Sources */,
+				85E54E421DE9BA9B0008EFFD /* DownLoadTaskCell.m in Sources */,
 				85E54E171DE94FA00008EFFD /* ViewController.m in Sources */,
 				85E54E141DE94FA00008EFFD /* AppDelegate.m in Sources */,
+				85E54E3F1DE9B9810008EFFD /* UIViewController+AddButton.m in Sources */,
 				85E54E111DE94FA00008EFFD /* main.m in Sources */,
 				85E54E361DE95A590008EFFD /* MediaCompat.m in Sources */,
 				85E54E2A1DE94FB10008EFFD /* MediaDownloader.m in Sources */,
@@ -332,6 +356,7 @@
 				85E54E251DE94FA00008EFFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
