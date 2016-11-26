@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85E54E111DE94FA00008EFFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E101DE94FA00008EFFD /* main.m */; };
+		85E54E141DE94FA00008EFFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E131DE94FA00008EFFD /* AppDelegate.m */; };
+		85E54E171DE94FA00008EFFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E161DE94FA00008EFFD /* ViewController.m */; };
+		85E54E1A1DE94FA00008EFFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E54E181DE94FA00008EFFD /* Main.storyboard */; };
+		85E54E1C1DE94FA00008EFFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E54E1B1DE94FA00008EFFD /* Assets.xcassets */; };
+		85E54E1F1DE94FA00008EFFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E54E1D1DE94FA00008EFFD /* LaunchScreen.storyboard */; };
+		85E54E2A1DE94FB10008EFFD /* MediaDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E271DE94FB10008EFFD /* MediaDownloader.m */; };
+		85E54E2B1DE94FB10008EFFD /* MediaDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E291DE94FB10008EFFD /* MediaDownloaderOperation.m */; };
+		85E54E361DE95A590008EFFD /* MediaCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E54E351DE95A590008EFFD /* MediaCompat.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		85E54E0C1DE94FA00008EFFD /* MediaDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E54E101DE94FA00008EFFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85E54E121DE94FA00008EFFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		85E54E131DE94FA00008EFFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		85E54E151DE94FA00008EFFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		85E54E161DE94FA00008EFFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		85E54E191DE94FA00008EFFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85E54E1B1DE94FA00008EFFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85E54E1E1DE94FA00008EFFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85E54E201DE94FA00008EFFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E54E261DE94FB10008EFFD /* MediaDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDownloader.h; sourceTree = "<group>"; };
+		85E54E271DE94FB10008EFFD /* MediaDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaDownloader.m; sourceTree = "<group>"; };
+		85E54E281DE94FB10008EFFD /* MediaDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDownloaderOperation.h; sourceTree = "<group>"; };
+		85E54E291DE94FB10008EFFD /* MediaDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaDownloaderOperation.m; sourceTree = "<group>"; };
+		85E54E2C1DE94FD80008EFFD /* MediaOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaOperation.h; sourceTree = "<group>"; };
+		85E54E2F1DE9513B0008EFFD /* MediaCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaCompat.h; sourceTree = "<group>"; };
+		85E54E351DE95A590008EFFD /* MediaCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaCompat.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85E54E091DE94FA00008EFFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85E54E031DE94FA00008EFFD = {
+			isa = PBXGroup;
+			children = (
+				85E54E0E1DE94FA00008EFFD /* MediaDownloader */,
+				85E54E0D1DE94FA00008EFFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85E54E0D1DE94FA00008EFFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85E54E0C1DE94FA00008EFFD /* MediaDownloader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85E54E0E1DE94FA00008EFFD /* MediaDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				85E54E261DE94FB10008EFFD /* MediaDownloader.h */,
+				85E54E271DE94FB10008EFFD /* MediaDownloader.m */,
+				85E54E281DE94FB10008EFFD /* MediaDownloaderOperation.h */,
+				85E54E291DE94FB10008EFFD /* MediaDownloaderOperation.m */,
+				85E54E2F1DE9513B0008EFFD /* MediaCompat.h */,
+				85E54E351DE95A590008EFFD /* MediaCompat.m */,
+				85E54E2C1DE94FD80008EFFD /* MediaOperation.h */,
+				85E54E121DE94FA00008EFFD /* AppDelegate.h */,
+				85E54E131DE94FA00008EFFD /* AppDelegate.m */,
+				85E54E151DE94FA00008EFFD /* ViewController.h */,
+				85E54E161DE94FA00008EFFD /* ViewController.m */,
+				85E54E181DE94FA00008EFFD /* Main.storyboard */,
+				85E54E1B1DE94FA00008EFFD /* Assets.xcassets */,
+				85E54E1D1DE94FA00008EFFD /* LaunchScreen.storyboard */,
+				85E54E201DE94FA00008EFFD /* Info.plist */,
+				85E54E0F1DE94FA00008EFFD /* Supporting Files */,
+			);
+			path = MediaDownloader;
+			sourceTree = "<group>";
+		};
+		85E54E0F1DE94FA00008EFFD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85E54E101DE94FA00008EFFD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85E54E0B1DE94FA00008EFFD /* MediaDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E54E231DE94FA00008EFFD /* Build configuration list for PBXNativeTarget "MediaDownloader" */;
+			buildPhases = (
+				85E54E081DE94FA00008EFFD /* Sources */,
+				85E54E091DE94FA00008EFFD /* Frameworks */,
+				85E54E0A1DE94FA00008EFFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaDownloader;
+			productName = MediaDownloader;
+			productReference = 85E54E0C1DE94FA00008EFFD /* MediaDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85E54E041DE94FA00008EFFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Ivan;
+				TargetAttributes = {
+					85E54E0B1DE94FA00008EFFD = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TT3X58LXCE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 85E54E071DE94FA00008EFFD /* Build configuration list for PBXProject "MediaDownloader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85E54E031DE94FA00008EFFD;
+			productRefGroup = 85E54E0D1DE94FA00008EFFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85E54E0B1DE94FA00008EFFD /* MediaDownloader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85E54E0A1DE94FA00008EFFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E54E1F1DE94FA00008EFFD /* LaunchScreen.storyboard in Resources */,
+				85E54E1C1DE94FA00008EFFD /* Assets.xcassets in Resources */,
+				85E54E1A1DE94FA00008EFFD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85E54E081DE94FA00008EFFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E54E2B1DE94FB10008EFFD /* MediaDownloaderOperation.m in Sources */,
+				85E54E171DE94FA00008EFFD /* ViewController.m in Sources */,
+				85E54E141DE94FA00008EFFD /* AppDelegate.m in Sources */,
+				85E54E111DE94FA00008EFFD /* main.m in Sources */,
+				85E54E361DE95A590008EFFD /* MediaCompat.m in Sources */,
+				85E54E2A1DE94FB10008EFFD /* MediaDownloader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		85E54E181DE94FA00008EFFD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E54E191DE94FA00008EFFD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85E54E1D1DE94FA00008EFFD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E54E1E1DE94FA00008EFFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85E54E211DE94FA00008EFFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85E54E221DE94FA00008EFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85E54E241DE94FA00008EFFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TT3X58LXCE;
+				INFOPLIST_FILE = MediaDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ivan.MediaDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		85E54E251DE94FA00008EFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TT3X58LXCE;
+				INFOPLIST_FILE = MediaDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ivan.MediaDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85E54E071DE94FA00008EFFD /* Build configuration list for PBXProject "MediaDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E54E211DE94FA00008EFFD /* Debug */,
+				85E54E221DE94FA00008EFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E54E231DE94FA00008EFFD /* Build configuration list for PBXNativeTarget "MediaDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E54E241DE94FA00008EFFD /* Debug */,
+				85E54E251DE94FA00008EFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85E54E041DE94FA00008EFFD /* Project object */;
+}
